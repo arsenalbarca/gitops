@@ -18,7 +18,7 @@ spec:
       # immediately before the promotion. If omitted, the default behavior is to promote the new
       # stack as soon as the ReplicaSet are completely ready/available.
       # Rollouts can be resumed using: `kubectl argo rollouts promote ROLLOUT`      
-      autoPromotionEnabled: true
+      autoPromotionEnabled: false
   revisionHistoryLimit: 2
   selector:
     matchLabels:
@@ -35,4 +35,5 @@ spec:
         - name: http
           containerPort: 8080
           protocol: TCP
+
 
